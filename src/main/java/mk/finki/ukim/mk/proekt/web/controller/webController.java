@@ -3,12 +3,14 @@ package mk.finki.ukim.mk.proekt.web.controller;
 import mk.finki.ukim.mk.proekt.model.*;
 import mk.finki.ukim.mk.proekt.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.MimeTypeUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
+@RequestMapping(path = "/", produces = MimeTypeUtils.APPLICATION_JSON_VALUE)
 public class webController {
 
     @Autowired
